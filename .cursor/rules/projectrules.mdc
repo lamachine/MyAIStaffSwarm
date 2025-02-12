@@ -1,0 +1,35 @@
+---
+description: This is the high level view of rules for the project generally and guide to specific rules for tools.
+globs: 
+---
+
+# Project Rules
+
+## Environment Setup
+- **ALWAYS USE A VENV.**
+- **ALWAYS USE GIT.**
+- This project is done in Python.
+- Use your local hosted Ollama image.
+- Use your local hosted Supabase database running in Docker.
+- Use the development environment as you see fit to help me learn and build the project.
+
+## Rules structure
+- Project Rules: Overall architecture, environment setup, and high-level project considerations.
+- Python Rules: Python best practices, code style, and project structure.
+FastAPI Guidelines: API structure, dependency injection, endpoint conventions.
+Supabase & Graph Guidelines: Database integration, RLS policies, GraphQL best practices.
+AI SDK & Model Management: Pydantic usage, fallback mechanisms, rate limiting, API key handling.
+Testing Guidelines: Concise key points or a reference to a separate testing document.
+
+## Architecture and Framework
+- Use Pydantic for agent and tool formats.
+- Use FastAPI as the web framework.
+- Maintain two UIs: a custom web UI and a CLI for testing/development.
+- Design the system to swap between LLM providers (Google, OpenAI, Claude, etc.) but default to Ollama with LLama 3.1 and nomic-embed-text.
+- Design the system to support swapping out databases.
+- Webhooks should be as language- and provider-agnostic as possible.
+- Support access via voice commands (Home Assistant, Hey Google, Hey Siri, Open Web UI).
+
+## Security and Scalability
+- The project must be designed to be as secure as possible.
+- The project must be designed to be as scalable as possible.

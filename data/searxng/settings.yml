@@ -1,0 +1,58 @@
+use_default_settings: false
+
+general:
+    debug: false
+    instance_name: "AgentSwarm Search"
+
+server:
+    port: 8080
+    bind_address: "0.0.0.0"
+    secret_key: "${API_KEY}"
+    base_url: "https://search.i4one.com/"
+    image_proxy: true
+    http_protocol_version: "1.0"
+
+ui:
+    default_theme: simple
+    default_locale: "en"
+    theme_args:
+        simple_style: auto
+
+search:
+    safe_search: 0
+    autocomplete: "google"
+    default_lang: "en"
+    formats:
+        - html
+    default_doi_resolver: 'doi.org'
+
+engines:
+    - name: google
+      engine: google
+      shortcut: g
+
+    - name: duckduckgo
+      engine: duckduckgo
+      shortcut: ddg
+
+    - name: bing
+      engine: bing
+      shortcut: b
+
+    - name: wikipedia
+      engine: wikipedia
+      shortcut: w
+
+outgoing:
+    request_timeout: 3.0
+    max_request_timeout: 10.0
+    pool_connections: 100
+    pool_maxsize: 10
+    enable_http2: true
+
+use_plugins:
+    - HTTPS_rewrite
+    - Search_on_category_select
+    - Hostname_replace
+
+allowed_plugins: []

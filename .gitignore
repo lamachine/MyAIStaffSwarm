@@ -1,0 +1,31 @@
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environment directories
+.venv/
+venv/
+ENV/
+env/
+
+# Ignore environment variable files
+.env
+*.env
+
+# Ignore log files and temporary files
+*.log
+logs/
+tmp/
+temp/
+
+# Ignore IDE-specific files and directories
+.vscode/
+.idea/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore directories with external tools and planning documents
+Existings Tools and Agents/
+AgentSwarmModularPlanning/ 
