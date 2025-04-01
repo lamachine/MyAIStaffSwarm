@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../AI Agent Swarm Compilation folder"
+		},
+		{
+			"path": "../graph_websearch_agent"
+		},
+		{
+			"path": "../archon"
+		}
+	],
+	"settings": {
+		"python.languageServer": "Pylance",
+		"python.analysis.diagnosticSeverityOverrides": {
+			"reportMissingModuleSource": "none",
+			"reportShadowedImports": "none"
+		},
+		"git.ignoreLimitWarning": true
+	}
+}

@@ -1,16 +1,17 @@
 # Project Status and Next Steps
 
 ## Checklist
-- [ ] **Set Up Git Repository:**  
+- [x] **~~Set Up Git Repository: (Completed)~~**  
   - Initialize Git repository if not done already.  
   - Create an initial commit with the current file structure.  
   - Create branches/tags for major milestones (e.g., "initial_setup", "agent_first_run").
 
 - [ ] **Script Startup Tasks:**  
   - Write a startup script (e.g., `startup.sh` or `Makefile`) that:
-    - Starts your tunnel host (using cloudflared or similar).  
-    - Starts Ollama (ensure it's running locally).  
+    - Checks or starts your tunnel host (using cloudflared or similar).  
+    - Checks or starts Ollama (ensure it's running locally).  
     - Verifies that all required Supabase containers are running (check using Docker commands).
+    - Verifies that all required Dev Environment containers are running (check using Docker commands).
   
 - [ ] **Review and Refine File Structure:**  
   - Create or duplicate the first main file (e.g., `main.py`) as the application entry point.

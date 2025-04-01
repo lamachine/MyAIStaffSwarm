@@ -1,82 +1,83 @@
-Crawl4ai-agent-mod
-# Documentation Crawler Agent
+# MyAiStaffSwarm
 
-A specialized AI agent that crawls and extracts documentation from websites, designed for the Live Agent Studio platform.
+An AI agent swarm system that coordinates multiple AI agents to work together on complex tasks. Built with modern Python, FastAPI, and integrated with various LLM models through Ollama.
 
 ## Features
 
-- Recursive web crawling with configurable depth and limits
-- Smart documentation page detection
-- Intelligent content chunking with preservation of:
-  - Code blocks (with language detection)
-  - Tables
-  - Images
-  - Math blocks
-  - Blockquotes
-- Fallback mechanism for documentation extraction
-- Integration with Live Agent Studio's messaging system
+- Multi-agent coordination and communication
+- Integration with Ollama for local LLM support
+- Supabase database integration
+- Streamlit and Chainlit web interfaces
+- Modular agent architecture
+- Protected document handling
+- Comprehensive logging system
 
-## Setup
+## Environment Setup
 
-1. Set environment variables:
-```bash
-SUPABASE_URL=your_supabase_url
-SUPABASE_KEY=your_supabase_key
-```
-
-2. Install dependencies:
+1. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Run the agent:
+2. Set up environment variables in `.env`:
 ```bash
-python src/api/agent_api.py
+# Create a .env file with your configuration
+# See .env.example for required variables
 ```
 
-## Usage
-
-Send a POST request to `/crawl` with:
-```json
-{
-  "query": "Crawl documentation at https://example.com/docs",
-  "user_id": "user123",
-  "request_id": "req456",
-  "session_id": "sess789"
-}
+3. Initialize Ollama (Windows):
+```powershell
+./init_ollama.bat
 ```
 
-The agent will:
-1. Extract the URL from the query
-2. Crawl the documentation
-3. Store structured content in the database
-4. Return a success/failure response
+## Running the Application
 
-## Live Agent Studio Integration
+### Development Mode
+```powershell
+./run_dev.ps1
+```
 
-This agent follows all Live Agent Studio requirements:
-- Accepts standard input parameters
-- Uses the messages table for conversation storage
-- Returns standardized responses
-- Handles errors gracefully
+### Streamlit Interface
+```powershell
+./run_streamlit.ps1
+```
 
-## Credit & Attribution
+## Project Structure
 
-The Credit URL is a link that Live Agent Studio displays to users when they interact with your agent. This helps users:
-- Learn more about you or your organization
-- Find your other projects/work
-- Contact you for questions or collaboration
+- `/app` - Core application code
+- `/src` - Source code for agents and utilities
+- `/tools` - Custom tool implementations
+- `/tests` - Test suite
+- `/protected_docs` - Secure document storage
+- `/logs` - Application logs
 
-You can use any of these as your Credit URL:
-- GitHub profile/repository
-- Organization website
-- Personal website/portfolio
-- LinkedIn profile
-- Other professional presence
+## Development
 
-For this agent:
-Created by: [Your Name/Organization]
-Credit URL: [Your URL]
+This project uses:
+- Python 3.11+
+- FastAPI for API endpoints
+- Pydantic for data validation
+- Supabase for database
+- Ollama for LLM integration
+- Streamlit/Chainlit for UI
+
+## Testing
+
+```bash
+pytest tests/
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## License
+
+[Your chosen license]
 
 
 

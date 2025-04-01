@@ -1,0 +1,36 @@
+{
+    "name": "MyAiStaffSwarm",
+    "description": "AI Staff Swarm with Ronan as valet/orchestrator",
+    "version": "0.1.0",
+    "entry_points": {
+        "main": "src/langgraphs/main_graph.py",
+        "test": "src/langgraphs/test_graph.py"
+    },
+    "models": {
+        "default": {
+            "provider": "ollama",
+            "name": "llama3.1",
+            "config": {
+                "temperature": 0.7,
+                "num_gpu": 1,
+                "num_thread": 8
+            }
+        }
+    },
+    "tools": {
+        "calendar": {
+            "module": "src.tools.calendar_helper",
+            "class": "CalendarHelper"
+        }
+    },
+    "agents": {
+        "Ronan": {
+            "module": "src.agents.pers_agent_orchestrator_Ronan.Ronan",
+            "class": "Ronan"
+        }
+    },
+    "dev": {
+        "port": 8084,
+        "host": "localhost"
+    }
+} 

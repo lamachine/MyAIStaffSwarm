@@ -1,6 +1,7 @@
 ---
 description: These are general python rules
-globs: *.py 
+globs: *.py
+alwaysApply: false
 ---
 ## Python Rules and Best Practices
 - Write concise, technical responses with accurate Python examples.

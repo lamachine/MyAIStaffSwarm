@@ -28,4 +28,49 @@ Thumbs.db
 
 # Ignore directories with external tools and planning documents
 Existings Tools and Agents/
-AgentSwarmModularPlanning/ 
+AgentSwarmModularPlanning/
+AI Agent Swarm Compilation folder/
+graph_websearch_agent/
+archon/
+# Existing entries...
+
+# Reference Projects (temporary)
+ref_projects/
+reference/
+external_projects/
+# Add any specific project folder names you'll use
+ref_pydantic_ai/
+ref_langgraph/
+
+# Additional Python environments
+.venv311/
+__pycache__/
+*.pyc
+
+# Additional sensitive files
+token.pickle
+*.pickle
+*.key
+credentials.json
+
+# AI and model files
+.cursor/
+models/
+*.gguf
+*.bin
+*.pt
+*.pth
+*.onnx
+
+# Development and cache
+.chainlit/
+.streamlit/
+.files/
+protected_docs/
+
+# Local development files
+*.bak
+*.swp
+*.swo
+.hypothesis/
+.pytest_cache/ 
